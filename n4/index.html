@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+        }
+        body {
+            background-color:  #71c1c1;
+        }
+        #feedback {
+            position: absolute;
+            top: 0; left: 50%;
+            width: 60%;
+            padding: 40px 10%;
+            transform: translate(-50%);
+            background: #4CAF50;
+            color: white;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        #feedback #text-input {
+            background-color: #83c983;
+            padding: 20px 10% 30px 10%;
+        }
+        #feedback > #text-input input{
+            margin: 0 5px 5px 15%;
+            width: 300px;
+			border: 0;
+			outline: 0;
+        }
+        #feedback > #text-input p{
+            margin: 20px 0 5px 15%;
+        }
+        .responses {
+            
+        }
+        #feedback h1 {
+            font-size: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #feedback h2 {
+            margin-top: 50px;
+        }
+        #feedback input, label {
+            margin: 10px;
+        }
+        button, #reset {
+            margin: 30px;
+            width: 200px;
+            background-color: #4eb1b1;
+            color: white;
+            padding: 5px;
+        }
+        #comments {
+            width: 100%;
+            height: 150px;
+			border: none;
+			outline: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="feedback"action="">
+        <h1>Harare Institute of Technology Survey</h1>
+        <div id="text-input">
+            <p>Name</p>
+            <input type="text" id="user-name" name="user-name"><br>
+            <p>Address</p>
+            <input type="text" id="address" name="address"><br>
+            <p>Email</p>
+            <input type="text" id="email" name="email">
+        </div>
+        
+        <div id="check-boxes" class="responses">
+            <h2>What did you like most about the campus?</h2>
+            <input type="checkbox" id="studs" name="studs">
+            <label for="studs">Students</label><br>
+            <input type="checkbox" id="location" name="location">
+            <label for="location">Location</label><br>
+            <input type="checkbox" id="campus" name="campus">
+            <label for="campus">Campus</label><br>
+            <input type="checkbox" id="atmos" name="atmos">
+            <label for="atmos">Atmosphere</label><br>
+            <input type="checkbox" id="sports" name="sports">
+            <label for="sports">Sports</label>
+        </div>
+        
+        <div id="radio-btns" class="responses">
+            <h2>How did you learn about the University?</h2>
+            <input type="radio" id="friends" name="learn" value="friends" checked>
+            <label for="friends">Friends</label><br>
+            <input type="radio" id="tv" name="learn" value="tv">
+            <label for="tv">Television</label><br>
+            <input type="radio" id="net" name="learn" value="net">
+            <label for="net">Internet</label><br>
+            <input type="radio" id="other" name="learn" value="other">
+            <label for="other">Other</label>
+        </div>
+        <div id="lastly" class="responses">
+            <h2>Did you find everything you were looking for?</h2>
+            <input type="radio" name="find" value="yebo" checked>
+            <label for="yebo">Yes</label>
+            <input type="radio" name="find" value="maya">
+            <label for="maya">No</label>
+            <input type="radio" name="find" value="pamwe">
+            <label for="pamwe">Maybe</label>
+        </div>
+        <div id="add-info">
+            <p style="margin-top: 50px">Additional Comments</p>
+			<textarea id="comments" name="comment" maxlength="4000"></textarea>
+        </div>
+        <button id="submit">Submit</button>
+        <input id="reset" type="reset">
+    </form>
+</body>
+</html>
